@@ -1,12 +1,15 @@
 name: Validate catalog
 on:
   push:
-    paths: [apps.json, .github/workflows/validate.yml]
+    paths: [apps.json, validate.mjs, .github/workflows/validate.yml]
   pull_request:
-    paths: [apps.json, .github/workflows/validate.yml]
+    paths: [apps.json, validate.mjs, .github/workflows/validate.yml]
 jobs:
   json:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: python3 -m json.tool apps.json > /dev/null
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node validate.mjs
