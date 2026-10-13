@@ -6,7 +6,32 @@
     "category": "Photography",
     "kind": "Apps",
     "language": "Rust",
-    "featured": true
+    "featured": true,
+    "slug": "raygun",
+    "icon": "/apps/raygun.png",
+    "theme": "violet",
+    "headline": "A photo library.\nAnd a RAW editor.",
+    "intro": "Keep your photos together, work on your RAW files, and stay on your own machine. Raygun brings a photo library and non-destructive editing into one desktop app.",
+    "platforms": ["Windows", "macOS", "Linux"],
+    "platformNote": "Desktop packages are available on GitHub Releases. Choose the build that matches your operating system and processor.",
+    "downloadUrl": "https://github.com/kao-offline/raygun/releases",
+    "requirements": ["Use the release package for your OS and CPU architecture.", "Building from source requires Rust 1.90 or later.", "Your library starts empty; import photos to get started."],
+    "features": [
+      { "title": "A home for your photos", "description": "Import your photos into a library instead of starting with a prefilled demo collection." },
+      { "title": "Non-destructive RAW editing", "description": "Develop RAW files without changing the original. The editing pipeline is built in Rust." },
+      { "title": "A desktop workflow", "description": "A native egui interface, with a GPU-backed rendering pipeline underneath." },
+      { "title": "Tools beyond the interface", "description": "The project includes a CLI and a control channel for automation." }
+    ],
+    "sections": [
+      { "title": "Start with your own photos.", "body": "A new Raygun library starts empty. Import photos from the File menu or pass folders on the command line. There's also an optional demo mode when you want to look around before bringing in your own files." },
+      { "title": "Keep the original. Work on the edit.", "body": "Raygun pairs its library with a non-destructive RAW development pipeline. The project combines the LightCraft interface with work on editing features inspired by RapidRAW, keeping the tools in the same workspace." },
+      { "title": "Keep going as the app grows.", "body": "Check for updates from the Help menu, or let the weekly background check handle it. The Windows MSI update flow is designed to keep your settings, library, and presets. The roadmap and feature-parity tracker are public on GitHub." }
+    ],
+    "faq": [
+      { "question": "Where do I download it?", "answer": "Use the GitHub Releases link. Windows, macOS, and Linux packages are listed there, along with checksums." },
+      { "question": "Can I try it without importing photos?", "answer": "The documented --seed-demo option creates procedural demo photos in a fresh library. Normal first launch starts with an empty library." },
+      { "question": "Is the code available?", "answer": "Yes. Raygun's repository, roadmap, and build instructions are public. The project uses the AGPL-3.0-or-later license." }
+    ]
   },
   {
     "repo": "kao-offline/spilled-cinema",
@@ -16,7 +41,32 @@
     "kind": "Apps",
     "url": "https://spilled-cinema.vercel.app",
     "language": "TypeScript",
-    "featured": true
+    "featured": true,
+    "slug": "spilled-cinema",
+    "icon": "/apps/spilled-cinema.png",
+    "theme": "blue",
+    "headline": "The dashboard up front.\nYour runtime behind it.",
+    "intro": "Spilled Cinema puts a web dashboard together with local runtimes, a Windows server installer, and a desktop client. You can use the dashboard while keeping the runtime on your own computer.",
+    "platforms": ["Web", "Windows server"],
+    "platformNote": "The dashboard runs in a browser. The published Windows installer sets up the headless server, not the dashboard itself. An Electron client and Chrome bridge are also part of the project.",
+    "downloadUrl": "https://github.com/kao-offline/spilled-cinema/releases",
+    "requirements": ["Use a compatible server or local runtime with the dashboard.", "The Windows installer and web dashboard are separate components.", "The Chrome extension can connect the deployed dashboard to a local runtime."],
+    "features": [
+      { "title": "A web dashboard", "description": "The main user-facing app lives in the browser, separate from the server runtime." },
+      { "title": "A Windows server installer", "description": "Set up the headless server without installing Git, Node.js, or npm yourself." },
+      { "title": "A local desktop client", "description": "The Electron shell starts a local runtime and the local dashboard." },
+      { "title": "A browser-to-local bridge", "description": "The Chrome extension lets the deployed dashboard talk to a local runtime." }
+    ],
+    "sections": [
+      { "title": "One project. A few ways to run it.", "body": "The dashboard, server, desktop shell, extension, and extractor are kept together in one repository. They share protocol and discovery code, while the dashboard stays separate from the part doing the local work." },
+      { "title": "Give a spare Windows PC a job.", "body": "The server installer includes its runtime. Run it, then complete the setup page it opens. It stores its state per user and starts the headless host at Windows sign-in. The installer doesn't install the library interface." },
+      { "title": "Keep local work local.", "body": "The native client is intended to run locally by default. The Chrome bridge connects a hosted dashboard to a local runtime without needing a public node URL. Convex handles registration, discovery, and relay selection rather than the heavy media work." }
+    ],
+    "faq": [
+      { "question": "Is the Windows download the whole app?", "answer": "It installs the headless server and runtime. The web dashboard is a separate part of the project." },
+      { "question": "Do I need Node.js for the Windows installer?", "answer": "No. The documented server installer includes its runtime, so Git, Node.js, and npm aren't needed on that PC." },
+      { "question": "Can I work with a local runtime?", "answer": "Yes. The repository includes a local server, an Electron shell, and a Chrome extension for connecting the web dashboard to it." }
+    ]
   },
   {
     "repo": "kao-offline/SkauTreg",
@@ -26,7 +76,31 @@
     "kind": "Apps",
     "url": "https://skautreg.overload.studio/",
     "language": "TypeScript",
-    "featured": true
+    "featured": true,
+    "slug": "skautreg",
+    "icon": "/apps/skautreg.svg",
+    "theme": "forest",
+    "headline": "Less chasing details.\nMore time for the group.",
+    "intro": "SkauTreg keeps a scout group's members, trips, calendar, and RSVPs together. It's a web app for the everyday admin that otherwise ends up spread across messages and spreadsheets.",
+    "platforms": ["Web"],
+    "platformNote": "Use it through the hosted website in a browser. Native Windows, macOS, iOS, and Android installers aren't listed in the project.",
+    "requirements": ["A browser and an internet connection.", "Sign in to use the group's workspace.", "Some finance, transport, and collaboration features are marked beta."],
+    "features": [
+      { "title": "Members and groups", "description": "Keep member and troop information in the same workspace." },
+      { "title": "Trips and RSVPs", "description": "Organize trips and keep track of who is coming." },
+      { "title": "A shared calendar", "description": "See the group's calendar alongside its trips and activities." },
+      { "title": "Finance and collaboration", "description": "Finance, transport-document sharing, and collaborative meetings are available as beta features." }
+    ],
+    "sections": [
+      { "title": "Know who's in the group.", "body": "Member management, groups, authentication, and the dashboard are listed as stable features. The idea is to keep the information you need for running the group close to its trips and calendar." },
+      { "title": "Put the trip and the replies together.", "body": "Trips, calendar entries, and RSVPs are stable parts of the app. Instead of keeping the plan in one place and the replies in another, you can work with them in the same group workspace." },
+      { "title": "See what's ready and what's still beta.", "body": "The project marks feature stages explicitly. Finance, transport-document sharing, collaborative meetings, and feedback are listed as beta. Those features can be enabled or disabled by the deployment's configuration." }
+    ],
+    "faq": [
+      { "question": "Does it need an account?", "answer": "Yes. Authentication and the group's workspace are part of the app." },
+      { "question": "Is everything out of beta?", "answer": "No. Members, groups, trips, calendar, and RSVP are listed as stable. Finance and several collaboration features are marked beta." },
+      { "question": "Can I inspect the code?", "answer": "Yes. The public repository includes the code and developer documentation. It is licensed under MIT." }
+    ]
   },
   {
     "repo": "kao-offline/winspo",
@@ -36,6 +110,30 @@
     "kind": "Apps",
     "url": "https://winspo-brown.vercel.app",
     "language": "TypeScript",
-    "featured": false
+    "featured": false,
+    "slug": "winspo",
+    "icon": "/apps/winspo.svg",
+    "theme": "orange",
+    "headline": "Pick what you like.\nShare a little code.",
+    "intro": "Winspo turns a set of design-reference picks into a short code you can share. Open the same dataset, decode the code, and see the choices together with a design profile. No account needed.",
+    "platforms": ["Web"],
+    "platformNote": "Works through the web app. The interface includes a searchable grid and a swipe mode, with tap and keyboard controls.",
+    "requirements": ["A browser and an internet connection.", "Share the dataset link and version together with the selection code.", "No account or sign-in is required."],
+    "features": [
+      { "title": "Pick from a grid", "description": "Search the reference collection and select the designs you like." },
+      { "title": "Or swipe through it", "description": "Use the card-based swipe mode to like or skip references." },
+      { "title": "Share a short code", "description": "Your selection is encoded into a compact code, alongside its dataset." },
+      { "title": "Bring your own dataset", "description": "A public GitHub repository can host a winspo.json manifest and optional custom theme." }
+    ],
+    "sections": [
+      { "title": "Less explaining. More pointing.", "body": "Choose the references that feel right from a grid, or move through them in swipe mode. The dataset keeps titles, URLs, tags, and optional media together, so the choices have some context when someone else opens them." },
+      { "title": "A code instead of an account.", "body": "Winspo encodes the selection into a short string. The other person decodes it against the same dataset and version to see the picks and an aggregated design profile. The code isn't self-describing, so send the dataset link with it." },
+      { "title": "Make the collection your own.", "body": "Host a winspo.json file in a public GitHub repository to use your own reference collection. You can also add a winspo.config.json file for a custom theme. Permanent item slots keep old selection codes meaningful when a dataset is reordered." }
+    ],
+    "faq": [
+      { "question": "Do I have to sign up?", "answer": "No. Winspo is designed as a no-login app; selections are shared as codes." },
+      { "question": "Can I send just the code?", "answer": "Send the dataset link and version too. The code only has meaning when decoded against the same dataset." },
+      { "question": "Can I use my own references?", "answer": "Yes. Put a winspo.json manifest in a public GitHub repository. An optional winspo.config.json file controls its theme." }
+    ]
   }
 ]
