@@ -1,0 +1,12 @@
+name: Validate catalog
+on:
+  push:
+    paths: [apps.json, .github/workflows/validate.yml]
+  pull_request:
+    paths: [apps.json, .github/workflows/validate.yml]
+jobs:
+  json:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 -m json.tool apps.json > /dev/null

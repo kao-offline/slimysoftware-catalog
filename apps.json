@@ -1,0 +1,41 @@
+[
+  {
+    "repo": "kao-offline/raygun",
+    "name": "Raygun",
+    "description": "A fast photo library and non-destructive RAW developer, built in pure Rust.",
+    "category": "Photography",
+    "kind": "Apps",
+    "language": "Rust",
+    "featured": true
+  },
+  {
+    "repo": "kao-offline/spilled-cinema",
+    "name": "Spilled Cinema",
+    "description": "The Spilled Cinema web app. Open it in your browser or explore the project on GitHub.",
+    "category": "Web app",
+    "kind": "Apps",
+    "url": "https://spilled-cinema.vercel.app",
+    "language": "TypeScript",
+    "featured": true
+  },
+  {
+    "repo": "kao-offline/SkauTreg",
+    "name": "SkauTreg",
+    "description": "A helper for scout groups: keep track of people, budgets, and ideas for your next trip.",
+    "category": "Organization",
+    "kind": "Apps",
+    "url": "https://skautreg.overload.studio/",
+    "language": "TypeScript",
+    "featured": true
+  },
+  {
+    "repo": "kao-offline/winspo",
+    "name": "Winspo",
+    "description": "Collect design references and share your picks with a short code. No accounts needed.",
+    "category": "Design",
+    "kind": "Apps",
+    "url": "https://winspo-brown.vercel.app",
+    "language": "TypeScript",
+    "featured": false
+  }
+]
